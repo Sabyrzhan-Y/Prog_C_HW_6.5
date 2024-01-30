@@ -26,14 +26,13 @@ int is_happy_number(int n)
         multiplication *= last_number;
         i /= 10;
     }
-
-    return multiplication;
+    return (sum == multiplication);
 }
 
 int main(void)
 {
     int n;
     scanf("%d", &n);
-    printf("%d\n", is_happy_number(n));
+    is_happy_number(n) ? printf("YES") : printf("NO");
     return 0;
 }

@@ -17,22 +17,17 @@ int is_happy_number(int n)
 
 int is_happy_number(int n)
 {
-    int Number_counter = 0, sum, multiplication;
-    for (int i = n; i > 0; i /= 10) Number_counter++;
-    int last_number;
-    int x = n;
-    int count = 0;
-    sum = 0;
-    multiplication = 1;
-    while (count != Number_counter)
+    int sum = 0, multiplication = 1, last_number = 0;
+    int i = n;
+    while (i > 0)
     {
-        last_number = x % 10;
+        last_number = i % 10;
         sum += last_number;
         multiplication *= last_number;
-        count++;
+        i /= 10;
     }
 
-    return Number_counter;
+    return multiplication;
 }
 
 int main(void)

@@ -18,9 +18,9 @@ int is_happy_number(int n)
 int is_happy_number(int n)
 {
     int Number_counter = 0, sum, multiplication;
+    for (int i = n; i > 0; i /= 10) Number_counter++;
     
-
-    return 0;
+    return Number_counter;
 }
 
 int main(void)

@@ -19,7 +19,19 @@ int is_happy_number(int n)
 {
     int Number_counter = 0, sum, multiplication;
     for (int i = n; i > 0; i /= 10) Number_counter++;
-    
+    int last_number;
+    int x = n;
+    int count = 0;
+    sum = 0;
+    multiplication = 1;
+    while (count != Number_counter)
+    {
+        last_number = x % 10;
+        sum += last_number;
+        multiplication *= last_number;
+        count++;
+    }
+
     return Number_counter;
 }
 

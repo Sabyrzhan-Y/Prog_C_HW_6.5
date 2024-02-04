@@ -15,9 +15,9 @@
 
 #include <stdio.h>
 
-int number_of_grains(int a)
+unsigned long long number_of_grains(int a)
 {
-    int grains = 1;
+    unsigned long long grains = 1;
         for(int i = 1;i != a;i++)grains *= 2;
     return grains;
 }
@@ -26,7 +26,7 @@ int main(void)
 {
     int a;
     scanf("%d", &a);
-    printf("%d\n", number_of_grains(a));
+    printf("%llu\n", number_of_grains(a));
  
     return 0;
 }
